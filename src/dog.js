@@ -19,6 +19,7 @@ class Dog {
     this.age = age;
     this.color = color;
     this.isSleeping = false;
+    this.tricks = [];
   }
 
   /**
@@ -27,7 +28,7 @@ class Dog {
    * @return {string} The description of a dog.
    */
   getDescription() {
-    // to do: retornar la concatenación de this.name y this.breed
+    return `${this.name} is a ${this.breed}.`;
   }
 
   /**
@@ -36,7 +37,7 @@ class Dog {
    * @return {string} A message indicating that the dog is now sleeping.
    */
   sleep() {
-    // to do - leer el jsdoc
+    return `${this.name} is now sleeping.`;
   }
 
   /**
@@ -45,7 +46,7 @@ class Dog {
    * @return {string} A message indicating that the dog woke up.
    */
   wakeUp() {
-    // to do - leer el jsdoc
+    return `${this.name} woke up.`;
   }
 
   /**
@@ -55,8 +56,8 @@ class Dog {
    * @return {string} A message indicating that the dog learned a new trick.
    */
   learnTrick(trick) {
-    if (trick == null || trick == "") {
-      throw new Error("Trick cannot be empty");
+    if (trick == null || trick == '') {
+      throw new Error('Trick cannot be empty');
     }
     this.tricks.push(trick);
     return `${this.name} learned a new trick: ${trick}.`;
@@ -68,7 +69,7 @@ class Dog {
    * @return {string} A message indicating "Woof! Woof!".
    */
   bark() {
-    // to do - leer el jsdoc
+    return 'Woof! Woof!';
   }
 
   /**
@@ -77,7 +78,7 @@ class Dog {
    * @return {string} All the information about the dog.
    */
   displayInfo() {
-    // to do - leer el jsdoc
+    return `${this.name} is a ${this.color} ${this.breed} that is ${this.age} years old.`;
   }
 }
 
